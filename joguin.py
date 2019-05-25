@@ -7,9 +7,9 @@ vez=1
 def quiz():
 
     print("Voce selecionou o Quiz. Deseja prosseguir?\n")
-    x = int(input("Digite 1 para continuar ou 0 para retornar ao menu:\n"))
+    x = int(input("Digite 1 para continuar ou 0 para retornar ao menu: "))
+    print("\n")
     if (x == 1):
-        print()
         print('Os Vingadores - Quiz\n')
         sleep(0.5)
         print('Agora vamos testar seus conhecimentos sobre o UCM!\nSerão 5 perguntas, valendo 10 pontos cada\n')
@@ -189,7 +189,8 @@ def quiz():
 def sinopse():
 
     print("Voce selecionou a Sinopse do Filme. Deseja prosseguir?\n")
-    y = int(input("Digite 2 para continuar ou 0 para retornar ao menu: \n"))
+    y = int(input("Digite 2 para continuar ou 0 para retornar ao menu: "))
+    print("\n")
     if(y == 2):
          print("#Vingadores Ultimato\n")
          sleep(0.5)
@@ -205,7 +206,8 @@ def sinopse():
 
 def elenco():
     print("Voce selecionou Elenco e Personagens. Deseja prosseguir?\n")
-    z = int(input("Digite 3 para continuar ou 0 para retornar ao menu: \n"))
+    z = int(input("Digite 3 para continuar ou 0 para retornar ao menu: "))
+    print("\n")
     if(z == 3):
         print("______Elenco Vingadores Ultimato______\n".center(79))
         print("#Robert Downey Jr. como Tony Stark / Homem de Ferro:\n"
@@ -290,7 +292,8 @@ def letras():
 def caca_palavras():
 
     print("Voce selecionou Caça-palavras. Deseja prosseguir?\n")
-    y = int(input("Digite 4 para continuar ou 0 para retornar ao menu: \n"))
+    y = int(input("Digite 4 para continuar ou 0 para retornar ao menu: "))
+    print("\n")
     if y==4:
         print("Há um Vingador nesse caça-palavras você consegue encontrá-lo? \n")
         sleep(0.5)
