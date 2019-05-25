@@ -172,6 +172,8 @@ def elenco():
     print("Voce selecionou Elenco e Personagens. Deseja prosseguir?\n")
     z = int(input("Digite 3 para continuar ou 0 para retornar ao menu: \n"))
     if(z == 3):
+        print("ELENCO VINGADORES ULTIMATO")
+        print(26*"—","\n")
         print("Robert Downey Jr. como Tony Stark / Homem de Ferro:\n"
               "O líder e benfeitor dos Vingadores que é auto-descrito como gênio, bilionário,\n"
               "playboy e filantropo que usa trajes eletromecânicos de sua própria criação.\n"
@@ -317,7 +319,8 @@ def menu(vex):
     global vez
     print("""
     ..........................................................
-       Bem vindo ao menu de opções                ###
+       Bem vindo ao menu de opções               
+                                                  ###
                                                  ####
           1 - Quiz                              ## ##
           2 - Sinopse do Filme                 ######
