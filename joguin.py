@@ -369,6 +369,175 @@ def caca_palavras():
     elif y==0:
         menu(vez)
 
+def palavra_cruzada():
+  print("Voce selecionou Palavras-Cruzadas. Deseja prosseguir?\n")
+  y = int(input("Digite 5 para continuar ou 0 para retornar ao menu: "))
+  print("\n")
+  if (y == 5):
+      print("Descubra quais são os personagens abaixo:\n")
+      sleep(0.5)
+      print("*Dicas*\n")
+      print(" 1 - Foi capaz de lutar sozinho contra uma parte dos Vingadores\n"
+            " 2 - É pequeno, porém um ótimo atirador\n"
+            " 3 - As vezes é uma das maiores mentes entre os vingadores, as vezes um pouco nervoso\n"
+            " 4 - Um(a) jovem que protege a cidade antes de ir para a escola\n\n")
+      sleep(1)
+      for l in range(0,11):
+        for c in range(0,21):
+          if(l==1) and (c==10):
+            print("2",end="")
+          if(l==1) and (c==15):
+            print("3",end="")
+          #thanos
+          if c==0:
+            if (l==0) and (c==0):
+              print("1",end="")
+            elif l<=6:
+              print("O ",end="")
+            else:
+              print("  ",end="")
+          #rocket
+          if c==10:
+            if (l>=3) and (l<=7):
+              print("O ",end="")
+            else:
+              print("",end="")
+          #hulk
+          if c==14:
+            if (l>=3) and (l<=5):
+              print("O ",end="")
+            else:
+              print("",end="")
+          #homemaranha
+          if (l==2) and (c==11):
+            print("- 4",end="")
+          if l==2:
+            if (c>0) and (c<=10):
+              print("O ",end="")
+          else:
+            print(" ",end="")
+          if c==20:
+            print()
+      sleep(1)
+      print("Responda somente com letras minúsculas\n")
+      personagem=['','','','']
+      x=0
+      cont=0
+      #verifica se tem letra maiuscula
+      while(True):
+        for i in range(0,4):
+          personagem[i]=input("{} : ".format(i+1))
+          if (re.search('[A-Z]',personagem[i])):
+            cont+=1
+        if cont>0:
+          print("Responda somente com letras minúsculas!!\n")
+          cont=0
+        else:
+          break
+
+      print("\n")
+      if (personagem[0]=="thanos"):
+        print("Thanos")
+        x+=1
+      if (personagem[1]=="rocket"):
+        print("Rocket")
+        x+=1
+      if (personagem[2]=="hulk"):
+        print("Hulk")
+        x+=1
+      if (personagem[3]=="homemaranha") or (personagem[3]=="homem aranha"):
+        print("Homem aranha")
+        x+=1
+      sleep(0.5)
+      if x==4:
+        for l in range(0,11):
+          for c in range(0,21):
+            #thanos
+            if c==0:
+              if (l==1):
+                print("T",end="")
+              elif l==2:
+                print("H ",end="")
+              elif l==3:
+                print("A ",end="")
+              elif l==4:
+                print("N ",end="")
+              elif l==5:
+                print("O ",end="")
+              elif l==6:
+                print("S ",end="")
+              else:
+                print("  ",end="")
+            #rocket
+            if c==10:
+              if (l==3):
+                print("O ",end="")
+              elif(l==4):
+                print("C ",end="")
+              elif(l==5):
+                print("K ",end="")
+              elif(l==6):
+                print("E ",end="")
+              elif(l==7):
+                print("T ",end="")
+              else:
+                print("",end="")
+            #hulk
+            if c==14:
+              if (l==3):
+                print("U ",end="")
+              elif(l==4):
+                print("L ",end="")
+              elif(l==5):
+                print("K ",end="")
+              else:
+                print("",end="")
+            #homemaranha
+            if l==2:
+              if c==1:
+                print("O ",end="")
+              elif c==2:
+                print("M ",end="")
+              elif c==3:
+                print("E ",end="")
+              elif c==4:
+                print("M ",end="")
+              elif c==5:
+                print("A ",end="")
+              elif c==6:
+                print("R ",end="")
+              elif c==7:
+                print("A ",end="")
+              elif c==8:
+                print("N ",end="")
+              elif c==9:
+                print("H ",end="")
+              elif c==10:
+                print("A ",end="")
+            else:
+              print(" ",end="")
+            if c==20:
+              print()
+        sleep(0.5)
+        print("Você acertou todos os personagens!!\n")
+        sleep(0.5)
+        input("Pressione enter para voltar ao Menu Principal...")
+        menu(vez)
+
+      elif x==1:
+        print("Você acertou {} personagem\n".format(x))
+        sleep(0.5)
+        input("Pressione enter para voltar ao Menu Principal...")
+        menu(vez)
+      else:
+        print("Você acertou {} personagens\n".format(x))
+        sleep(0.5)
+        input("Pressione enter para voltar ao Menu Principal...")
+        menu(vez)
+  elif y==0:
+      menu(vez)
+
+
 def menu(vex):
     global nome
     global vez
@@ -381,7 +550,8 @@ def menu(vex):
              2 - Sinopse do Filme                ######
              3 - Elenco/ Personagens            ##   ##
              4 - Caça-palavras                 ##    ##
-             5 - Sair                         ##  
+             5 - Palavras-Cruzadas            ## 
+             6 - Sair
        ......................................................\n""")
     if vex==1:
         nome=input("Antes de começar, gostariamos de saber o seu nome: ")
@@ -398,6 +568,8 @@ def menu(vex):
     elif (opcao == 4):
         caca_palavras()
     elif (opcao == 5):
+        palavra_cruzada()
+    elif (opcao == 6):
         print("Até a próxima",nome,"!")
         exit()
     else:
