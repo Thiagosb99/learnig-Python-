@@ -377,10 +377,10 @@ def palavra_cruzada():
       print("Descubra quais são os personagens abaixo:\n")
       sleep(0.5)
       print("*Dicas*\n")
-      print(" 1 - Foi capaz de lutar sozinho contra uma parte dos Vingadores\n"
-            " 2 - É pequeno, porém um ótimo atirador\n"
-            " 3 - As vezes é uma das maiores mentes entre os vingadores, as vezes um pouco nervoso\n"
-            " 4 - Um(a) jovem que protege a cidade antes de ir para a escola\n\n")
+      print(" 1 - Foi capaz de lutar sozinho contra uma parte dos Vingadores.\n"
+            " 2 - É pequeno, porém um ótimo atirador.\n"
+            " 3 - Tem um temperamento não muito amigável na maior parte do tempo.\n"
+            " 4 - Protege a cidade antes de ir para a escola.\n\n")
       sleep(1)
       for l in range(0,11):
         for c in range(0,21):
